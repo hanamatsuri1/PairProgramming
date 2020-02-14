@@ -1,56 +1,86 @@
 package scrabble;
 
+import java.util.HashSet;
+import java.util.Set;
+
 public class LetterValues {
-    private char[] lettersWorthOnePoint;
-    private char[] lettersWorthTwoPoint;
-    private char[] lettersWorthThreePoint;
-    private char[] lettersWorthFourPoint;
-    private char[] lettersWorthFivePoint;
-    private char[] lettersWorthEightPoint;
-    private char[] lettersWorthTenPoint;
+    private Set<Character> lettersWorthOnePoint;
+    private Set<Character> lettersWorthTwoPoint;
+    private Set<Character> lettersWorthThreePoint;
+    private Set<Character> lettersWorthFourPoint;
+    private Set<Character> lettersWorthFivePoint;
+    private Set<Character> lettersWorthEightPoint;
+    private Set<Character> lettersWorthTenPoint;
 
     public LetterValues(){
-         String onePointLetters = "aeioulnrst";
-         String twoPointLetters = "dg";
-         String threePointLetters = "bcmp";
-         String fourPointLetters = "fhvwy";
-         String fivePointLetters = "k";
-         String eightPointLetters = "jx";
-         String tenPointLetters = "qz";
-        lettersWorthOnePoint=onePointLetters.toCharArray();
-        lettersWorthTwoPoint=twoPointLetters.toCharArray();
-        lettersWorthThreePoint=threePointLetters.toCharArray();
-        lettersWorthFourPoint=fourPointLetters.toCharArray();
-        lettersWorthFivePoint=fivePointLetters.toCharArray();
-        lettersWorthEightPoint=eightPointLetters.toCharArray();
-        lettersWorthTenPoint=tenPointLetters.toCharArray();
+        //Add letters of different scores to different sets
+        lettersWorthOnePoint=new HashSet<>();
+        lettersWorthOnePoint.add('a');
+        lettersWorthOnePoint.add('e');
+        lettersWorthOnePoint.add('i');
+        lettersWorthOnePoint.add('o');
+        lettersWorthOnePoint.add('u');
+        lettersWorthOnePoint.add('l');
+        lettersWorthOnePoint.add('n');
+        lettersWorthOnePoint.add('r');
+        lettersWorthOnePoint.add('s');
+        lettersWorthOnePoint.add('t');
+
+        lettersWorthTwoPoint=new HashSet<>();
+        lettersWorthTwoPoint.add('d');
+        lettersWorthTwoPoint.add('g');
+
+        lettersWorthThreePoint=new HashSet<>();
+        lettersWorthThreePoint.add('b');
+        lettersWorthThreePoint.add('c');
+        lettersWorthThreePoint.add('m');
+        lettersWorthThreePoint.add('p');
+
+        lettersWorthFourPoint=new HashSet<>();
+        lettersWorthFourPoint.add('f');
+        lettersWorthFourPoint.add('h');
+        lettersWorthFourPoint.add('v');
+        lettersWorthFourPoint.add('w');
+        lettersWorthFourPoint.add('y');
+
+        lettersWorthFivePoint=new HashSet<>();
+        lettersWorthFivePoint.add('k');
+
+        lettersWorthEightPoint=new HashSet<>();
+        lettersWorthEightPoint.add('j');
+        lettersWorthEightPoint.add('x');
+
+        lettersWorthTenPoint=new HashSet<>();
+        lettersWorthTenPoint.add('q');
+        lettersWorthTenPoint.add('z');
     }
 
-    public char[] getLettersWorthOnePoint() {
+    public Set<Character> getLettersWorthOnePoint() {
         return lettersWorthOnePoint;
     }
 
-    public char[] getLettersWorthTwoPoint() {
+    public Set<Character> getLettersWorthTwoPoint() {
         return lettersWorthTwoPoint;
     }
 
-    public char[] getLettersWorthThreePoint() {
+    public Set<Character> getLettersWorthThreePoint() {
         return lettersWorthThreePoint;
     }
 
-    public char[] getLettersWorthFourPoint() {
+    public Set<Character> getLettersWorthFourPoint() {
         return lettersWorthFourPoint;
     }
 
-    public char[] getLettersWorthFivePoint() {
+    public Set<Character> getLettersWorthFivePoint() {
         return lettersWorthFivePoint;
     }
 
-    public char[] getLettersWorthEightPoint() {
+    public Set<Character> getLettersWorthEightPoint() {
         return lettersWorthEightPoint;
     }
 
-    public char[] getLettersWorthTenPoint() {
+    public Set<Character> getLettersWorthTenPoint() {
         return lettersWorthTenPoint;
     }
+
 }
